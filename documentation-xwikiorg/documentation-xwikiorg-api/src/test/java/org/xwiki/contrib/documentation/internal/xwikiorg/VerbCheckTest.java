@@ -206,6 +206,16 @@ class VerbCheckTest
         assertEquals(2, violations.size());
     }
 
+    @Test
+    void checkWhenReferenceWithAllowedIngNoun()
+    {
+        assertEquals(0,
+            this.check.check(createDocument(
+                "Troubleshooting",
+                "troubleshooting",
+                "reference")).size());
+    }
+
     // --- Type-independent cases ---
 
     @Test
